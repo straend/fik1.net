@@ -40,6 +40,7 @@ scelerisque lorem.
 
 ## Quotes
 
+> <i class="icon-quote-left icon-4x pull-left"></i>
 > Allow the president to invade a neighboring nation, whenever he shall deem it
 > necessary to repel an invasion, and you allow him to do so whenever he may
 > choose to say he deems it necessary for such a purpose - and you allow him to

@@ -134,15 +134,13 @@ header a{
 .github{
     display: block;
 }
-.codehilite h3{
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
 
 .codehilite pre {
-    border-top: 1px dashed;
-    border-bottom: 1px dashed;
+    background-color: #DDD;
+    border-left: 3px solid rgb(180, 56, 140);
+    padding: 5px;
 }
+
 @media screen and (min-width: 720px){
   section#sidebar {
         width: 18%;
