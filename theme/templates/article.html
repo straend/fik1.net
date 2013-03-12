@@ -17,5 +17,18 @@
 </footer>
 <div class="entry-content">
 {{ article.content }}
+
+<div id="article_meta">
+	{% if not article.category == 'posts' %}
+		Posted in:
+			<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+	{% endif %}
+	{% if article.tags %}
+		<br />Filed under:
+		{% for tag in article.tags %}
+			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+		{% endfor %}
+	{% endif %}
+</div>
 </div>
 {% endblock %}
