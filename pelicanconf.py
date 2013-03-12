@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from plugins import latex
 
 AUTHOR = u'Tomas Strand'
 SITENAME = u'fik1'
@@ -15,7 +14,7 @@ THEME = 'theme'
 STATIC_PATHS = ["images", ]
 MARKUP = 'md'
 
-PLUGINS = ['latex',]
+PLUGINS = ['plugins.latex',]
 
 # Should we show a vCard of the author, its only visible in the source
 VCARD = True
