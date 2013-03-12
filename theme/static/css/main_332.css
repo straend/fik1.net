@@ -1,0 +1,165 @@
+body {
+    background: url(../img/gradient_squares.png) fixed;
+}
+
+a {
+    color: rgb(180, 56, 140);
+    text-decoration:    underline;
+}
+
+
+::selection {
+    background-color: rgb(180, 56, 140);
+    color: white;
+}
+
+.wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#body-wrapper {
+    padding-bottom: 30px;
+}
+
+section#sidebar {
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+
+}
+section#sidebar h1 a{
+    text-decoration: none;
+}
+section#sidebar h1 a:hover{
+
+}
+
+section#sidebar h1,
+section#sidebar h5,
+section#sidebar h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.social-list li{
+    padding: 5px;
+    float: left;
+    text-align: left;
+
+}
+ul.social-list {
+    width: 100%;
+}
+.social-list a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+ul.social-list a:hover {
+    color: rgb(180, 56, 140)    ;
+    background-color: transparent;
+    text-decoration: none;
+}
+ul.category-list {
+    clear: left;
+}
+
+ul.category-list li {
+   padding: 5px 10px;
+}
+ul.tag-list li{
+    padding: 4px 10px;
+}
+.no-list,
+.no-list li {
+    list-style: none;
+    display: block;
+}
+.no-list li {
+    float: left;
+}
+
+#content {
+    width: 100%;
+    clear: both;
+}
+
+header a{
+    color: black;
+}
+.hentry {
+    position: relative;
+    min-height: 70px;
+}
+.hentry header {
+    padding-left: 0%;
+}
+.hentry header h2{
+    padding: 0;
+    margin: 0;
+}
+#posts-list li:last-child {
+    border-bottom: none;
+}
+#posts-list li {
+    padding: 4px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed rgb(180, 56, 140);
+    min-height: 70px;
+    width: 100%;
+}
+.hentry .entry-content {
+    width: 100%;
+    float: right;
+}
+.hentry .entry-content p {
+    margin: 0;
+    padding: 5px;
+}
+
+.hentry footer{
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    line-height: 30px;
+}
+
+.github{
+    display: none;
+}
+.category-list {
+
+}
+@media screen and (min-width: 860px){
+    .github{
+        display: block;
+    }
+  section#sidebar {
+        width: 18%;
+        padding-top: 20px;
+        text-align: center;
+        position: fixed;
+    }
+
+    #content {
+        float: right;
+        width: 75%;
+
+    }
+    .hentry footer{
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        line-height: 30px;
+    }
+    .social-list,
+    .social-list li {
+        width: 100%;
+    }
+    ul.tag-list {
+        clear: none;
+    }
+}
