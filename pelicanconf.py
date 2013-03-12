@@ -9,6 +9,7 @@ AUTHOR_PHONE = u'+358 50 5649 847'
 TIMEZONE = 'Europe/Helsinki'
 
 DEFAULT_LANG = u'en'
+DEFAULT_DATE = 'fs'
 THEME = 'theme'
 STATIC_PATHS = ["images", ]
 MARKUP = 'md'
