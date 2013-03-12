@@ -84,9 +84,8 @@ ul.social-list a:hover {
 #content {
     width: 100%;
     clear: both;
-    line-height: 2em;
-    font-size: 15px;
-    line-height: 25px;
+    line-height: 1.4em;
+    font-size: 1.1em;
 
 }
 #content .no-list{
