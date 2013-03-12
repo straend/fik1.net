@@ -5,6 +5,8 @@ Category: frontend, webdev
 Tags: pelican, theme, testing, ui
 
 Summary: Better to remain silent and be thought a foll than to speak out and remove all doubt. -Abraham Lincoln
+
+
 ## Paragraph, Link, Bold, Italics
 
 *Vivamus* id dolor [ipsum](http://www.lipsum.com/). Nullam tellus **libero**,
