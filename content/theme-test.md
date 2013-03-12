@@ -3,6 +3,7 @@ Tags: pelican, theme, testing, ui
 Summary: Better to remain silent and be thought a foll than to speak out and remove all doubt. -Abraham Lincoln
 
 
+Stolen from: [William Ting](https://github.com/wting/williamting.com/blob/master/src/posts/theme-test.md)
 
 ## Paragraph, Link, Bold, Italics
 
