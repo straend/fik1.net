@@ -9,9 +9,9 @@ AUTHOR_PHONE = u'+358 50 5649 847'
 TIMEZONE = 'Europe/Helsinki'
 
 DEFAULT_LANG = u'en'
-DEFAULT_DATE = 'fs'
 THEME = 'theme'
-STATIC_PATHS = ["images", "codes", ]
+STATIC_PATHS = ["images", ]
+MARKUP = 'md'
 
 # Should we show a vCard of the author, its only visible in the source
 VCARD = True
@@ -25,9 +25,6 @@ AUTHOR_ADDRESS = (
 
 FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
-
-# Blogroll
-LINKS =  ()
 
 # Social widget
 SOCIAL = (
@@ -50,4 +47,4 @@ CATEGORY_SAVE_AS 	= '{slug}/index.html'
 
 GITHUB_URL = 'http://github.com/straend/'
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
