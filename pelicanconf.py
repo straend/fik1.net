@@ -14,6 +14,8 @@ THEME = 'theme'
 STATIC_PATHS = ["images", ]
 MARKUP = 'md'
 
+PLUGINS = ['plugins.latex.latex',]
+
 # Should we show a vCard of the author, its only visible in the source
 VCARD = True
 AUTHOR_ADDRESS = (

@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css"/>
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.css">
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css"/>
+
+  {% if article and article.latex %}
+    {{ article.latex }}
+  {% endif %}
+
   {% block extra_head %}{% endblock %}
   {% include 'feeds.html' %}
 </head>
