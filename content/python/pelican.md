@@ -5,15 +5,15 @@ Summary: The story of how to generate a static website with [Pelican](http://get
 
 Firstly you need a server with Git and SSH.
 
-Install Gitolite according to https://github.com/sitaramc/gitolite#readme
+Install Gitolite according to [Gitolite](https://github.com/sitaramc/gitolite#readme)
 Add a repo, for example blog
 on your local machine edit
-gitolite-admin/conf/gitolite.conf
-and add
-'''
+
+gitolite-admin/conf/gitolite.conf and add
+
 	repo blog
-	RW+		=	"your username"
-'''
+		RW+		=	"your username"
+
 
 Add a post-receive hook to the blog repo
 on the server log in as the git user and create a post-receive hook in the repo
