@@ -1,4 +1,4 @@
-Title: Arch-villains take 2
+Title: Arch-villains take 3
 Tags: thats, awesome, Mr Glass, David
 Slug: what-are-you-saying
 Summary: Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?
