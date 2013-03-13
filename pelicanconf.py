@@ -49,5 +49,6 @@ CATEGORY_SAVE_AS 	= '{slug}/index.html'
 
 
 GITHUB_URL = 'http://github.com/straend/'
+GOOGLE_ANALYTICS = 'UA-6766930-16'
 
 DEFAULT_PAGINATION = 5
