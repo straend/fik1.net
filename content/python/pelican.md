@@ -1,15 +1,18 @@
 Title: Git, Gitolite and Pelican
 Slug: git-pelican
 Tags: git, gitolite, pelican, python, make
-Summary: The story of how to generate a static website with [Pelican](http://getpelican.com/) using [[Git](http://git-scm.org) and Gitolite
+Summary: The story of how to generate a static website with Pelican using Git and Gitolite
 
 Firstly you need a server with Git and SSH.
 
 Install Gitolite according to [Gitolite](https://github.com/sitaramc/gitolite#readme)
-Add a repo, for example blog
-on your local machine edit
+Add a repo, for example blog, but first you have to clone the gitolite-admin repo
 
-gitolite-admin/conf/gitolite.conf and add
+	git clone git@host:/gitolite-admin
+
+then you can add a repo
+in "gitolite-admin/conf/gitolite.conf"
+add a repository
 
 	repo blog
 		RW+		=	"your username"
@@ -17,8 +20,8 @@ gitolite-admin/conf/gitolite.conf and add
 
 Add a post-receive hook to the blog repo
 on the server log in as the git user and create a post-receive hook in the repo
+edit the file
 ~/repositories/blog.git/hooks/post-receive
-
 	#!/bin/bash
 	umask 0022
 
@@ -61,3 +64,4 @@ When you are ready, add the pages, commit and push
 
 Now the site should be visible somewhere if you have a webserver setup
 
+You can read more http://martinbrochhaus.com/2012/02/pelican.html
