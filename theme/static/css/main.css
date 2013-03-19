@@ -154,6 +154,9 @@ header a{
         position: fixed;
         max-width: 200px;
     }
+    section#sidebar footer li{
+        width: 100%;
+    }
     #body-wrapper {
         max-width: 1024px;
     }
@@ -186,5 +189,6 @@ header a{
     ul.social-list span {
         display: inline-block;
     }
+
 
 }
