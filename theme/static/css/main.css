@@ -79,6 +79,13 @@ ul.social-list a:hover {
 .no-list li.header{
     width: 100%;
 }
+section#sidebar footer br{
+    display: none;
+}
+
+section#sidebar footer a{
+    margin-left: 12px;
+}
 
 
 #content {
@@ -182,4 +189,10 @@ header a{
     ul.social-list span {
         display: inline-block;
     }
+
+    section#sidebar footer a{
+        clear: left;
+        margin-left: 0;
+    }
+
 }
