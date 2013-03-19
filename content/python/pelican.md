@@ -21,7 +21,9 @@ add a repository
 Add a post-receive hook to the blog repo
 on the server log in as the git user and create a post-receive hook in the repo
 edit the file
+
 ~/repositories/blog.git/hooks/post-receive
+
 	#!/bin/bash
 	umask 0022
 
@@ -62,6 +64,6 @@ When you are ready, add the pages, commit and push
 	git commit -m "Explaining commit message" -a
 	git push
 
-Now the site should be visible somewhere if you have a webserver setup
+Now the site should be visible somewhere if you have a webserver
 
-You can read more http://martinbrochhaus.com/2012/02/pelican.html
+You can read more about [Pelican with Github](http://martinbrochhaus.com/2012/02/pelican.html)
