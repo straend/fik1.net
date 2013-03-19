@@ -141,6 +141,11 @@ header a{
     line-height: 1.5em;
 }
 
+.codehilitetable .linenodiv{
+    line-height: 1.5em;
+}
+
+
 @media screen and (min-width: 720px){
     section#sidebar {
         width: 18%;
