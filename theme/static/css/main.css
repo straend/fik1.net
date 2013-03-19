@@ -189,10 +189,13 @@ header a{
     ul.social-list span {
         display: inline-block;
     }
-
+    section#sidebar footer{
+        text-align: left;
+    }
     section#sidebar footer a{
         clear: left;
         margin-left: 0;
+        display: block;
     }
 
 }
