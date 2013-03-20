@@ -11,7 +11,7 @@ TIMEZONE = 'Europe/Helsinki'
 DEFAULT_LANG = u'en'
 DEFAULT_DATE = 'fs'
 
-THEME = 'themes/pelican-purple'
+THEME = 'pelican-purple'
 STATIC_PATHS = ["images", ]
 
 MARKUP = 'md'
