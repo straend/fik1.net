@@ -10,8 +10,10 @@ TIMEZONE = 'Europe/Helsinki'
 
 DEFAULT_LANG = u'en'
 DEFAULT_DATE = 'fs'
-THEME = 'theme'
+
+THEME = 'themes/pelican-purple'
 STATIC_PATHS = ["images", ]
+
 MARKUP = 'md'
 
 
@@ -37,10 +39,10 @@ CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
 # Social widget
 SOCIAL = (
-	('github', 'https://github.com/straend/'),
-	('linkedin', 'https://www.linkedin.com/profile/view?id=53161835/'),
-	('facebook', 'https://facebook.com/strandt/'),
-	('google-plus','https://plus.google.com/112133210939722958756/'),
+	('github', 		'https://github.com/straend/'),
+	('linkedin', 	'http://fi.linkedin.com/in/strandt'),
+	('facebook', 	'https://facebook.com/strandt/'),
+	('google-plus',	'https://plus.google.com/112133210939722958756/'),
 
 )
 
