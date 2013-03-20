@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} - {{ SITENAME }} {% endblock %}
+
+{% block content %}
+<header>
+<h2 class="entry-title">
+	<a 	href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+		title="Permalink to {{ article.title }}">
+		{{ article.title }}
+	</a>
+</h2>
+</header>
+<footer class="post-info">
+	<abbr class="published" title="{{ article.date }}">
+		{{ article.date.strftime('%A %B %d, %Y') }}
+	</abbr>
+</footer>
+<div class="entry-content">
+{{ article.content }}
+<hr>
+<div id="article_meta">
+	{% if not article.category == 'posts' %}
+		Posted in:
+			<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+	{% endif %}
+	{% if article.tags %}
+		<br />Filed under:
+		{% for tag in article.tags %}
+			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+		{% endfor %}
+	{% endif %}
+</div>
+</div>
+<hr>
+{% include 'disqus.html' %}
+
+{% endblock %}

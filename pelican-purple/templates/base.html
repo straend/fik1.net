@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta name="author" content="Tomas Strand" />
+  <meta name="generator" content="Pelican (http://blog.getpelican.com/)" />
+
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css"/>
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css"/>
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+
+
+  {% if article and article.latex %}
+    {{ article.latex }}
+  {% endif %}
+
+  {% block extra_head %}{% endblock %}
+  {% include 'feeds.html' %}
+</head>
+
+<body>
+{% if VCARD %}
+<span class="vcard">
+  <span class="name">{{ AUTHOR }}</span>
+  <span class="adr">
+  {% for type, value in AUTHOR_ADDRESS %}
+    <span class="{{ type }}">{{ value }}</span>
+  {% endfor %}
+  </span>
+  {% if AUTHOR_PHONE %}
+    <span class="tel">{{ AUTHOR_PHONE }}</span>
+  {% endif %}
+  {% if AUTHOR_EMAIL %}
+    <span class="email">{{ AUTHOR_EMAIL }}</span>
+  {% endif %}
+</span>
+{% endif %}
+
+<div id="body-wrapper" class="wrapper">
+  <section id="sidebar">
+  <hgroup>
+    <h1><a href="{{ SITEURL }}">fik1</a></h1>
+    <h5>
+      <address class="vcard author">
+        {{ AUTHOR }}
+      </address>
+    </h5>
+</hgroup>
+    <hr>
+
+    <ul class="no-list social-list">
+    {% for name,link in SOCIAL %}
+    <li>
+      <a href="{{ link }}" title="{{AUTHOR}} on {{name}}">
+        <i class="icon-{{name}} icon-2x"></i><span>{{ name }}</span>
+      </a>
+    </li>
+    {% endfor %}
+    {% if AUTHOR_EMAIL %}
+    <li>
+      <a href="mailto:{{ AUTHOR_EMAIL }}" title="{{ AUTHOR_EMAIL }}">
+        <i class="icon-envelope icon-2x"></i><span>{{ AUTHOR_EMAIL }}</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if AUTHOR_PHONE %}
+    <li>
+      <a href="tel:{{ AUTHOR_PHONE }}" title="{{ AUTHOR_PHONE }}">
+        <i class="icon-phone icon-2x"></i><span>{{ AUTHOR_PHONE }}</span>
+      </a>
+    </li>
+    {% endif %}
+    </ul>
+
+    <ul class="no-list category-list">
+      <li class="header">Categories</li>
+      {% for category, articles in categories %}
+          <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="no-list tag-list">
+    <li class="header">Tags</li>
+    {% for tag in tag_cloud %}
+      <li class="tag-{{ tag.1 }}">
+        <a href="{{ SITEURL }}/{{ tag.0.url }}">
+          {{ tag.0 }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+
+  <footer>
+    <ul class="no-list">
+      <li>Powered by</li>
+      <li><a href="http://getpelican.com/">Pelican</a> and</li>
+      <li><a href="https://github.com/straend/pelican-purple">Pelican Purple</a></li>
+    </ul>
+  </footer>
+
+  </section>
+
+  <section id="content" class="body">
+
+  {% block content %}
+  {% endblock %}
+
+  </section>
+</div>
+
+{% include 'github.html' %}
+{% include 'google_analytics.html' %}
+</body>
+</html>

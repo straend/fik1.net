@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }}{% endblock %}
+
+
+{% block content %}
+<ul id="posts-list" class="hfeed no-list">
+  {% for article in articles %}
+    <li><article class="hentry">
+      <header>
+        <h2 class="entry-title">
+        	<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to this {{ article.title }}">
+        		{{ article.title }}
+    		</a>
+    	</h2>
+      </header>
+
+      <footer class="post-info">
+        <abbr class="published" title="{{ article.date }}">
+          {{ article.date.strftime('%B %d, %Y') }}
+        </abbr>
+	 </footer>
+
+	<div class="entry-content">
+      	<p>{{ article.summary }}</p>
+	</div>
+    </article></li>
+  {% endfor %}
+</ul>
+
+{% include 'pagination.html' %}
+{% endblock %}
