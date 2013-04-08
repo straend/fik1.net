@@ -1,6 +1,7 @@
 Title: Git, Gitolite and Pelican
 Slug: git-pelican
 Tags: git, gitolite, pelican, python, make
+Date: 2013-03-28
 Summary: The story of how to generate a static website with Pelican using Git and Gitolite
 
 Firstly you need a server with Git and SSH.

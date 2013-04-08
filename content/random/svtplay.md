@@ -1,6 +1,7 @@
 Title: Cheating SVT
 Tags: svt, privoxy
 Slug: svt-play
+Date: 2013-04-08
 Summary: How to watch SVT outside of Sweden
 
 Since [SVT](http://svt.se) decided to stream live television and publish almost all of its contents on [SVTPlay](http://svtplay.se) i thought it would be nice to watch them. But since I'm in Finland [SVT](http://svt.se) wont allow me to watch everything.
