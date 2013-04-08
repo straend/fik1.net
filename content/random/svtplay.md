@@ -9,6 +9,7 @@ Since [SVT](http://svt.se) decided to stream live television and publish almost 
 #####So what to do?
 *	Get a VPS in Sweden, Check out [EDIS](http://www.edis.at/en/server/linux-vserver/sweden/) they have great prices. And remember to check for deals at [LowEndBox](http://www.lowendbox.com/tag/sweden/)
 *	Instead	of tunneling all Your traffic through the little box I use [Privoxy](http://privoxy.org)
+*	Instead of Privoxy, One can Use [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
 
 #####How to do it
 *	Setup Your new/old VPS with ssh access. Keybased login, becouse we are alla lazy(specially me, so [DuckDuckGo](https://duckduckgo.com/?q=keybased+ssh+login+) it)
@@ -17,10 +18,16 @@ Since [SVT](http://svt.se) decided to stream live television and publish almost 
 	ssh user@your.swedish.server -D 9090
 
 *	If you then put localhost and port 9090 as a socks proxy in your browser of choice, you could watch everything on SVTPlay, but all othter traffic would also be tunneled through your server.
+*	FoxyProxy
+	Install FoxyProxy from link above, and add a new proxy pointing to your tunnel
+	add the following url patters
+		*svt.se*, *svtplay.se* and svt*akamai*.net
+	Profit
 
-*	So we install Privoxy and configure it to send only specific traffic through the server.
-Minimal Privoxy config stolen from [Tor Wiki](https://trac.torproject.org/projects/tor/wiki/doc/PrivoxyConfig) and modified.
-Remember to change the portnumber
+*	If Youd like one proxy for your home network then use Pivoxy
+	First install Privoxy and configure it to send only specific traffic through the server.
+	Minimal Privoxy config stolen from [Tor Wiki](https://trac.torproject.org/projects/tor/wiki/doc/PrivoxyConfig) and modified.
+	Remember to change the portnumber
 
 		# Generally, this file goes in /etc/privoxy/config
 		#
@@ -30,8 +37,6 @@ Remember to change the portnumber
 		forward-socks4a .akamaihd.net/          127.0.0.1:9090 .
 		forward-socks4a .svt.se/                127.0.0.1:9090 .
 		forward-socks4a .svtplay.se/            127.0.0.1:9090 .
-		forward-socks4a .omtrdc.net/            127.0.0.1:9090 .
-		forward-socks4a .edgesuite.net/         127.0.0.1:9090 .
 		# End SVTPlay
 
 		confdir /etc/privoxy
@@ -56,12 +61,11 @@ Remember to change the portnumber
 		enable-remote-http-toggle 1
 		buffer-limit 4096
 
-Thats it. Now start/restart Privoxy and change your proxyserver in the browser and You are good to go.
+	Thats it. Now start/restart Privoxy and change your proxyserver in the browser and You are good to go.
 
-Note that some of the domains we are proxying are used as Content Delivery Networks or for adserving. So it might result in slower internet browsing, and swedish ads served up on other sites.
+	Note that some of the domains we are proxying are used as Content Delivery Networks. So it might result in slower internet browsing.
 
-	.akamai.net
-	.akamaitech.net
-	.akamaihd.net
-	.omtrdc.net
-	.edgesuite.net
+		.akamai.net
+		.akamaitech.net
+		.akamaihd.net
+
