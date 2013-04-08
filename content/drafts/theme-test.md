@@ -1,5 +1,6 @@
 Title: This Is A Theme Testing Post
 Tags: pelican, theme, testing, ui
+Date: 2013-03-28
 Summary: Better to remain silent and be thought a foll than to speak out and remove all doubt. -Abraham Lincoln
 
 
